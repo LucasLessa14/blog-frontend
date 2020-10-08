@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ALTPUT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <div class="container">
+      <h2>Altput</h2>
+      <br>
+
+      <% array.forEach(element => { %>
+        <div class="article">
+          <div class="article-image">
+            <a href="/article/<%= element.slug %>">
+              <img src="/img/capa-arduino.jpg" alt="Capa do post">
+            </a>
+          </div>
+          <div class="article-content">
+            <a href="/article/<%= element.slug %>">
+              <h3><%= element.title %></h3>
+            </a>
+            <p>bla bla bla (aqui tem uma description)</p>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+
+    <%- include('partials/footer') %> 
+  </body>
+</html>
