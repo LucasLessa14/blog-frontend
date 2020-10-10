@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Roboto', sans-serif; color: #565659 }
 a { text-decoration: none; color: #565659; font-weight: 700 !important; letter-spacing: 0.05em; }
 ul { list-style: none; }
 hr { margin: 16px 0; }
 
 .container {
+    width: 100%;
     max-width: 960px;
     margin: auto;
     padding: 0 5%;
@@ -72,6 +68,7 @@ hr { margin: 16px 0; }
 /* RESPONSIVE MENU */
 #header .menu-wrap {
     /* position: fixed; */
+    display: none;
     top: 0px;
     right: 20px;
     z-index: 1;
@@ -203,18 +200,6 @@ hr { margin: 16px 0; }
     transition: color 0.4s ease;
 }
 
-@media (min-width: 900px) {
-    #header .menu-wrap {
-        display: none;
-    }
-}
-
-@media (max-width: 900px) {
-    #header #menu-initial {
-        display: none !important;
-    }
-}
-
 /* CAPA */
 #capa {
     display: flex;
@@ -269,23 +254,6 @@ li > p {
     line-height: 1;
 }
 
-@media (max-width: 900px) {
-    .article {
-        flex-direction: column;
-    }
-
-    .article-image {
-        width: 100%;
-        height: auto;
-        margin-right: 0px;
-    }
-
-    .article-image img {
-        width: 100%;
-        height: auto;
-    }
-}
-
 /* FOOTER */
 #footer {
     padding-top: 32px;
@@ -318,4 +286,29 @@ li > p {
 
 #footer .copyrigth {
     margin: 16px 0;
+}
+
+@media (max-width: 900px) {
+    #header #menu-initial {
+        display: none !important;
+    }
+
+    .article {
+        flex-direction: column;
+    }
+    
+    .article-image {
+        width: 100%;
+        height: auto;
+        margin-right: 0px;
+    }
+    
+    .article-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    #header .menu-wrap {
+        display: block;
+    }
 }
